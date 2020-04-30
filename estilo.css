@@ -13,10 +13,9 @@ h1{
   color : #CD5C5C;
 }
 .caja{
-  position:center;
   text-align: relative;
    width: 55%;
-  height: 1000px;
-  background-color: #F8F9F9 ;
+  height: 700px;
+  background-color: #FFFFFF ;
   padding: 15px;
   }
