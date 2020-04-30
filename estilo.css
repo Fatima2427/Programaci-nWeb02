@@ -6,8 +6,6 @@ body{
  
   margin :0 ;
   font-family: sans-serif;
-  color:  #008000 ;
-
 }
 
 body{
@@ -17,6 +15,6 @@ body{
 h1{
   display:inline-block;
   position: relative;
-  color : #008000;
+  color : #CD5C5C;
 
 }
