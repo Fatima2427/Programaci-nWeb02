@@ -1,14 +1,9 @@
 body{ 
-    background-image: url(im/navidad.png); 
+    background-image: url(im/fondo.jpg); 
     background-repeat: repeat;
-     background-size: 100% , 100% 100%; }
-  body {
- 
+     background-size: 100% , 100% 100%; 
   margin :0 ;
   font-family: sans-serif;
-}
-
-body{
   text-align: center;
 
 }
@@ -16,5 +11,4 @@ h1{
   display:inline-block;
   position: relative;
   color : #CD5C5C;
-
 }
