@@ -16,9 +16,7 @@ h1{
   position:center;
   text-align: relative;
    width: 55%;
-  height: 100%;
-  border :2px solid #F8F9F9;
-  color: #F8F9F9 ;
+  height: 1000px;
+  background-color: #F8F9F9 ;
   padding: 15px;
-  text-align: center;
   }
