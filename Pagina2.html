@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <meta charset = "UTF-8">
+  <title > Laboratorio </title>
+  <meta name="viewport" content="">
+  <link rel ="stylesheet" type="text/css" href ="estilo.css">
+  
+      <script>
+           function suma(){
+var num1 = document.getElementById('textfield').value;
+var num2 = document.getElementById('textfield2').value;
+document.getElementById("targetDiv").innerHTML = parseInt(num1)+ parseInt(num2);
+    }
+     function restar(){
+     var num1 = document.getElementById('textfield').value;
+     var num2 = document.getElementById('textfield2').value;
+     document.getElementById("targetDiv").innerHTML = num1 - num2;
+     }
+     function multiplicar(){
+     var num1 = document.getElementById('textfield').value;
+     var num2 = document.getElementById('textfield2').value;
+     document.getElementById("targetDiv").innerHTML = num1 *num2;
+     }
+     function dividir(){
+     var num1 = document.getElementById('textfield').value;
+     var num2 = document.getElementById('textfield2').value;
+     document.getElementById("targetDiv").innerHTML = num1 /num2;
+     }
+  </script>
+ <body>
+    <center>
+    <div class="caja">
+    <h3> <font color ="#2F4F4F" >Calculadora de Pweb 2</font></h3>
+    <hr size =3 color =   #FF0000 width = 100 align = "center ">
+    <nav class="cal">
+      <form>
+        <br>
+       <b>Ingrese un numero:</b> <input type="text" style="background:#fff ; border-color: white;color:#ff7b4a" id="textfield"><br></font>
+ <b> Ingrese otro numero: </b><input type="text" style="background:#fff;border-color: white; color:#ff7b4a"id="textfield2"><br></font>
+  <br>
+      <input type="button" style="background:#ff7b4a;font-size:30px ;width: 50px ;height: 50px; border-color: white ; color:white"  onclick="suma()" value="+">
+      <input type="button" style="background:#ff7b4a;font-size:30px ;width: 50px ;height: 50px; border-color: white ; color:white"  onclick="restar()" value="-"><br>4
+    <input type="button" style="background:#ff7b4a;font-size:30px ;width: 50px ;height: 50px; border-color: white ; color:white"   onclick="multiplicar()" value="*">
+    <input type="button" style="background:#ff7b4a;font-size:30px ;width: 50px ;height: 50px; border-color: white ; color:white"   onclick="dividir()" value="/">
+     <input type="button"  onclick="boton()" value="Click">
+
+  </form>
+  <br>
+      <b>resultado: </b><div id="targetDiv"> </div>
+  </body>  </nav>
+
+    </div>
+    </center>
+</body>
+</html>
