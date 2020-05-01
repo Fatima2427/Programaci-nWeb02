@@ -28,3 +28,11 @@ h1{
   height: 350px;
   }
  
+.calculadora2{
+  position:center;
+  text-align: relative;
+  background:#000080;
+  color:  #AED6F1;
+  width: 250px;
+  height: 150px;
+}
