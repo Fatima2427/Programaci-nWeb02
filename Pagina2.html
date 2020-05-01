@@ -27,9 +27,10 @@ document.getElementById("targetDiv").innerHTML = parseInt(num1)+ parseInt(num2);
      var num2 = document.getElementById('textfield2').value;
      document.getElementById("targetDiv").innerHTML =num1/num2;
      }
-          function binario(){
+     function binario(){
      var num = document.getElementById('textfield3').value;
-     document.getElementById("targetDiv2").innerHTML =num.toString(2);
+       var num2 = num+0;
+     document.getElementById("targetDiv2").innerHTML =num2.toString(2);
      }
   </script>
  <body>
