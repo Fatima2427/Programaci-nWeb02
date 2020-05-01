@@ -20,12 +20,16 @@ document.getElementById("targetDiv").innerHTML = parseInt(num1)+ parseInt(num2);
      var num1 = document.getElementById('textfield').value;
      var num2 = document.getElementById('textfield2').value;
        var num = num1 * num2;
-     document.getElementById("targetDiv").innerHTML =num.toString(2);
+     document.getElementById("targetDiv").innerHTML =num;
      }
      function dividir(){
      var num1 = document.getElementById('textfield').value;
      var num2 = document.getElementById('textfield2').value;
      document.getElementById("targetDiv").innerHTML =num1/num2;
+     }
+          function binario(){
+     var num1 = document.getElementById('textfield').value;
+     document.getElementById("targetDiv").innerHTML =num1.toString(2);
      }
   </script>
  <body>
@@ -33,21 +37,35 @@ document.getElementById("targetDiv").innerHTML = parseInt(num1)+ parseInt(num2);
     <div class="caja">
 
 <h1 class="titulo" >Laboratorio Programación web 2 </h1>
-      <p>Seleccione un tipo de operación....</p>
+      <p>OPERACIONES ARITMETICAS</p>
     <nav class="cal">
       <form>
         <br>
-    <input type="text" style="background:#fff ; border-color: white;color:#ff7b4a" id="textfield"><br></font>
-   <input type="text" style="background:#fff;border-color: white; color:#ff7b4a"id="textfield2"><br></font>
+    <input type="text" style="background:#fff ; border-color: white;color:#ff7b4a" id="textfield"><br>
+   <input type="text" style="background:#fff;border-color: white; color:#ff7b4a"id="textfield2"><br>
   <br>
       <input type="button" style="background:#000080;font-size:30px ;width: 50px ;height: 50px; border-color: white ; color:white"  onclick="suma()" value="+">
       <input type="button" style="background:#000080;font-size:30px ;width: 50px ;height: 50px; border-color: white ; color:white"  onclick="restar()" value="-"><br>
-    <input type="button" style="background:#000080;font-size:30px ;width: 50px ;height: 50px; border-color: white ; color:white"   onclick="multiplicar()" value="*">
-    <input type="button" style="background:#000080;font-size:30px ;width: 50px ;height: 50px; border-color: white ; color:white"   onclick="dividir()" value="/">
+      <input type="button" style="background:#000080;font-size:30px ;width: 50px ;height: 50px; border-color: white ; color:white"   onclick="multiplicar()" value="*">
+      <input type="button" style="background:#000080;font-size:30px ;width: 50px ;height: 50px; border-color: white ; color:white"   onclick="dividir()" value="/">
   </form>
   <br>
       <b>resultado: </b><div id="targetDiv"> </div>
   </nav>
+      <br>
+      <p>OPERACIONES BINARIAS</p>
+   <br>
+   <nav class ="calculadora2">
+     <form>
+        <br>
+    <input type="text" style="background:#fff ; border-color: white;color:#ff7b4a" id="textfield">    <input type="button" style="background:#000080;font-size:30px ;width: 50px ;height: 100px; border-color: white ; color:white"  onclick="binario()" value="Convertir">
+     <br>
+      </form>
+      <b>Resultado: </b><div id="targetDiv"> </div>
+     
+   </nav>
+   
+   
   <br>
     <input type="button" value="Atras" onClick=" window.location.href='index.html' ">
     </div>
