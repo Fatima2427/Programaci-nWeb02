@@ -19,12 +19,13 @@ document.getElementById("targetDiv").innerHTML = parseInt(num1)+ parseInt(num2);
      function multiplicar(){
      var num1 = document.getElementById('textfield').value;
      var num2 = document.getElementById('textfield2').value;
-     document.getElementById("targetDiv").innerHTML = num1 *num2;
+       var num = num1 * num2;
+     document.getElementById("targetDiv").innerHTML =num.toString(2);
      }
      function dividir(){
      var num1 = document.getElementById('textfield').value;
      var num2 = document.getElementById('textfield2').value;
-     document.getElementById("targetDiv").innerHTML = num1 /num2;
+     document.getElementById("targetDiv").innerHTML =num1/num2;
      }
   </script>
  <body>
