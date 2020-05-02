@@ -27,10 +27,21 @@ document.getElementById("targetDiv").innerHTML = parseInt(num1)+ parseInt(num2);
      var num2 = document.getElementById('textfield2').value;
      document.getElementById("targetDiv").innerHTML =num1/num2;
      }
-     function binario(){
-     var num = document.getElementById('textfield3').value;
-       var num2 = num * 1;
-     document.getElementById("targetDiv2").innerHTML =num2.toString(2);
+     function or(){
+     var num3= document.getElementById('textfield3').value;
+     var num4 = document.getElementById('textfield4').value;
+        var a = parseInt(num3).toString(2);
+        var b = parseInt(num4).toString(2);
+        var result = a|b ;
+        document.getElementById("targetDiv2").innerHTML = result;
+  }
+     function and(){
+      var num3= document.getElementById('textfield3').value;
+      var num4= document.getElementById('textfield4').value;
+       var a = parseInt(num3).toString(2);
+        var b = parseInt(num4).toString(2);
+        var result = a&b ;
+        document.getElementById("targetDiv2").innerHTML =result;
      }
   </script>
  <body>
@@ -38,7 +49,8 @@ document.getElementById("targetDiv").innerHTML = parseInt(num1)+ parseInt(num2);
     <div class="caja">
 
 <h1 class="titulo" >Laboratorio Programación web 2 </h1>
-      <p>OPERACIONES ARITMETICAS</p>
+<nav id="demo" style="display:none">
+  <p>OPERACIONES ARITMETICAS</p>
     <nav class="cal">
       <form>
         <br>
@@ -53,7 +65,15 @@ document.getElementById("targetDiv").innerHTML = parseInt(num1)+ parseInt(num2);
   <br>
       <b>resultado: </b><div id="targetDiv"> </div>
   </nav>
+     
+</nav>
+
+<button type="button" onclick="document.getElementById('demo').style.display='block'">ARITMETICAS</button>
+   
       <br>
+
+
+   <nav id="binario" style="display:none">      
       <p>OPERACIONES BINARIAS</p>
    <br>
    <nav class ="calculadora2">
@@ -61,16 +81,26 @@ document.getElementById("targetDiv").innerHTML = parseInt(num1)+ parseInt(num2);
         <br>
     <input type="text" style="background:#fff ; border-color: white;color:#ff7b4a" id="textfield3"> 
       <br>
-       <input type="button" style="background:#000080;width: 80px ;height: 30px; border-color: white ; color:white"  onclick="binario()" value="Convertir">
+   <input type="text" style="background:#fff ; border-color: white;color:#ff7b4a" id="textfield4"> 
+   <br>
+           <input type="button" style="background:#000080;font-size:30px ;width: 50px ;height: 50px; border-color: white ; color:white"  onclick="and()" value="&">
+      <input type="button" style="background:#000080;font-size:30px ;width: 50px ;height: 50px; border-color: white ; color:white"  onclick="or()" value="||"><br>
+      <input type="button" style="background:#000080;font-size:30px ;width: 50px ;height: 50px; border-color: white ; color:white"   onclick="left()" value="<<">
+      <input type="button" style="background:#000080;font-size:30px ;width: 50px ;height: 50px; border-color: white ; color:white"   onclick="right()" value=">>">
      <br>
       </form>
       <b>Resultado: </b><div id="targetDiv2"> </div>
      
    </nav>
-   
+   </nav>
+   <br>
+<button type="button" onclick="document.getElementById('binario').style.display='block'">BINARIAS</button>
    
   <br>
+
+
     <input type="button" value="Atras" onClick=" window.location.href='index.html' ">
+
     </div>
     </center>
 </body>
