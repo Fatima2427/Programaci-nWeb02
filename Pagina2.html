@@ -32,16 +32,67 @@ document.getElementById("targetDiv").innerHTML = parseInt(num1)+ parseInt(num2);
      var num4 = document.getElementById('textfield4').value;
         var a = parseInt(num3).toString(2);
         var b = parseInt(num4).toString(2);
-        var result = a|b ;
-        document.getElementById("targetDiv2").innerHTML = result;
+    var result = parseInt(a,2)  | parseInt(b,2);
+        document.getElementById("targetDiv2").innerHTML = a + "<br>" +
+        b + "<br>" + "result decimal :" + result  ;
+
   }
      function and(){
       var num3= document.getElementById('textfield3').value;
       var num4= document.getElementById('textfield4').value;
        var a = parseInt(num3).toString(2);
         var b = parseInt(num4).toString(2);
-        var result = a&b ;
-        document.getElementById("targetDiv2").innerHTML =result;
+        var result = parseInt(a,2) &  parseInt(b,2);
+        
+      document.getElementById("targetDiv2").innerHTML = a + "<br>" +
+        b + "<br>" + "result decimal :" + result  ;
+
+     }
+     function right(){
+      var num3= document.getElementById('textfield3').value;
+      var num4= document.getElementById('textfield4').value;
+       var a = parseInt(num3).toString(2);
+        var b = parseInt(num4).toString(2);
+ var result = parseInt(a,2) >> parseInt(b,2);
+       document.getElementById("targetDiv2").innerHTML = a + "<br>" +
+        b + "<br>" + "result decimal :" + result  ;
+
+     }
+     function left(){
+      var num3= document.getElementById('textfield3').value;
+      var num4= document.getElementById('textfield4').value;
+       var a = parseInt(num3).toString(2);
+        var b = parseInt(num4).toString(2);
+  var result = parseInt(a,2)  << parseInt(b,2);
+       document.getElementById("targetDiv2").innerHTML =  a + "<br>" +
+        b + "<br>" + "result decimal :" + result  ;
+
+
+     }
+       function xor(){
+      var num3= document.getElementById('textfield3').value;
+      var num4= document.getElementById('textfield4').value;
+       var a = parseInt(num3).toString(2);
+        var b = parseInt(num4).toString(2);
+  var result = parseInt(a,2)  ^ parseInt(b,2);
+       document.getElementById("targetDiv2").innerHTML =  a + "<br>" +
+        b + "<br>" + "result decimal :" + result  ;
+     }
+     function right2(){
+      var num3= document.getElementById('textfield3').value;
+      var num4= document.getElementById('textfield4').value;
+       var a = parseInt(num3).toString(2);
+        var b = parseInt(num4).toString(2);
+  var result = parseInt(a,2)  >>> parseInt(b,2);
+       document.getElementById("targetDiv2").innerHTML =  a + "<br>" +
+        b + "<br>" + "result decimal :" + result  ;
+     }
+        function conjuncion(){
+      var num5= document.getElementById('textfield5');
+      var num6= document.getElementById('textfield6');
+  var rpta = num5^num6;
+       document.getElementById("targetDiv3").innerHTML =  num5 + "<br>" +
+        num6 + "<br>" + "result  :" + rpta  ;
      }
   </script>
  <body>
@@ -83,10 +134,12 @@ document.getElementById("targetDiv").innerHTML = parseInt(num1)+ parseInt(num2);
       <br>
    <input type="text" style="background:#fff ; border-color: white;color:#ff7b4a" id="textfield4"> 
    <br>
-           <input type="button" style="background:#000080;font-size:30px ;width: 50px ;height: 50px; border-color: white ; color:white"  onclick="and()" value="&">
-      <input type="button" style="background:#000080;font-size:30px ;width: 50px ;height: 50px; border-color: white ; color:white"  onclick="or()" value="||"><br>
-      <input type="button" style="background:#000080;font-size:30px ;width: 50px ;height: 50px; border-color: white ; color:white"   onclick="left()" value="<<">
-      <input type="button" style="background:#000080;font-size:30px ;width: 50px ;height: 50px; border-color: white ; color:white"   onclick="right()" value=">>">
+           <input type="button" style="background:#000080;font-size:20px ;width: 50px ;height: 50px; border-color: white ; color:white"  onclick="and()" value="&">
+      <input type="button" style="background:#000080;font-size:20px ;width: 50px ;height: 50px; border-color: white ; color:white"  onclick="or()" value="|">
+      <input type="button" style="background:#000080;font-size:20px ;width: 50px ;height: 50px; border-color: white ; color:white"   onclick="left()" value="<<"><br>
+      <input type="button" style="background:#000080;font-size:20px ;width: 50px ;height: 50px; border-color: white ; color:white"   onclick="right()" value=">>">
+      <input type="button" style="background:#000080;font-size:20px ;width: 50px ;height: 50px; border-color: white ; color:white"   onclick="right2()" value=">>>">
+       <input type="button" style="background:#000080;font-size:20px ;width: 50px ;height: 50px; border-color: white ; color:white"   onclick="xor()" value="^">
      <br>
       </form>
       <b>Resultado: </b><div id="targetDiv2"> </div>
@@ -94,11 +147,36 @@ document.getElementById("targetDiv").innerHTML = parseInt(num1)+ parseInt(num2);
    </nav>
    </nav>
    <br>
+
 <button type="button" onclick="document.getElementById('binario').style.display='block'">BINARIAS</button>
-   
+   <br>
   <br>
-
-
+   <nav id="logica" style="display:none">      
+      <p>OPERACIONES LOGICAS</p>
+   <br>
+   <nav class ="calculadora3">
+     <form>
+        <br>
+    <input type="text" style="background:#fff ; border-color: white;color:#ff7b4a" id="textfield5" placeholder="F ó V"> 
+      <br>
+   <input type="text" style="background:#fff ; border-color: white;color:#ff7b4a" id="textfield6" placeholder="F ó V"> 
+   <br>
+           <input type="button" style="background:#000080;font-size:20px ;width: 50px ;height: 50px; border-color: white ; color:white"  onclick="conjuncion()" value="^">
+      <input type="button" style="background:#000080;font-size:20px ;width: 50px ;height: 50px; border-color: white ; color:white"  onclick="disyuncion()" value="v">
+      <input type="button" style="background:#000080;font-size:20px ;width: 50px ;height: 50px; border-color: white ; color:white"   onclick="XOR()" value="+"><br>
+      <input type="button" style="background:#000080;font-size:20px ;width: 50px ;height: 50px; border-color: white ; color:white"   onclick="condicional()" value="→">
+      <input type="button" style="background:#000080;font-size:20px ;width: 50px ;height: 50px; border-color: white ; color:white"   onclick="bicondicional()" value="↔">
+       
+     <br>
+      </form>
+<b>Resultado: </b><div id="targetDiv3"> </div>
+ </nav>
+   </nav>
+    <button type="button" onclick="document.getElementById('logica').style.display='block'">LOGICA</button>
+     
+  
+<br>
+<br>
     <input type="button" value="Atras" onClick=" window.location.href='index.html' ">
 
     </div>
