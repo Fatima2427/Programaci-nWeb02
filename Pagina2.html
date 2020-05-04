@@ -4,103 +4,20 @@
   <title > Laboratorio </title>
   <meta name="viewport" content="">
   <link rel ="stylesheet" type="text/css" href ="estilo.css">
-  
-      <script>
-           function suma(){
-var num1 = document.getElementById('textfield').value;
-var num2 = document.getElementById('textfield2').value;
-document.getElementById("targetDiv").innerHTML = parseInt(num1)+ parseInt(num2);
-    }
-     function restar(){
-     var num1 = document.getElementById('textfield').value;
-     var num2 = document.getElementById('textfield2').value;
-     document.getElementById("targetDiv").innerHTML = num1 - num2;
-     }
-     function multiplicar(){
-     var num1 = document.getElementById('textfield').value;
-     var num2 = document.getElementById('textfield2').value;
-       var num = num1 * num2;
-     document.getElementById("targetDiv").innerHTML =num;
-     }
-     function dividir(){
-     var num1 = document.getElementById('textfield').value;
-     var num2 = document.getElementById('textfield2').value;
-     document.getElementById("targetDiv").innerHTML =num1/num2;
-     }
-     function or(){
-     var num3= document.getElementById('textfield3').value;
-     var num4 = document.getElementById('textfield4').value;
-        var a = parseInt(num3).toString(2);
-        var b = parseInt(num4).toString(2);
-    var result = parseInt(a,2)  | parseInt(b,2);
-        document.getElementById("targetDiv2").innerHTML = a + "<br>" +
-        b + "<br>" + "result decimal :" + result  ;
+   <script type="text/javascript"src="java.js"></script>
 
-  }
-     function and(){
-      var num3= document.getElementById('textfield3').value;
-      var num4= document.getElementById('textfield4').value;
-       var a = parseInt(num3).toString(2);
-        var b = parseInt(num4).toString(2);
-        var result = parseInt(a,2) &  parseInt(b,2);
-        
-      document.getElementById("targetDiv2").innerHTML = a + "<br>" +
-        b + "<br>" + "result decimal :" + result  ;
-
-     }
-     function right(){
-      var num3= document.getElementById('textfield3').value;
-      var num4= document.getElementById('textfield4').value;
-       var a = parseInt(num3).toString(2);
-        var b = parseInt(num4).toString(2);
- var result = parseInt(a,2) >> parseInt(b,2);
-       document.getElementById("targetDiv2").innerHTML = a + "<br>" +
-        b + "<br>" + "result decimal :" + result  ;
-
-     }
-     function left(){
-      var num3= document.getElementById('textfield3').value;
-      var num4= document.getElementById('textfield4').value;
-       var a = parseInt(num3).toString(2);
-        var b = parseInt(num4).toString(2);
-  var result = parseInt(a,2)  << parseInt(b,2);
-       document.getElementById("targetDiv2").innerHTML =  a + "<br>" +
-        b + "<br>" + "result decimal :" + result  ;
-
-
-     }
-       function xor(){
-      var num3= document.getElementById('textfield3').value;
-      var num4= document.getElementById('textfield4').value;
-       var a = parseInt(num3).toString(2);
-        var b = parseInt(num4).toString(2);
-  var result = parseInt(a,2)  ^ parseInt(b,2);
-       document.getElementById("targetDiv2").innerHTML =  a + "<br>" +
-        b + "<br>" + "result decimal :" + result  ;
-     }
-     function right2(){
-      var num3= document.getElementById('textfield3').value;
-      var num4= document.getElementById('textfield4').value;
-       var a = parseInt(num3).toString(2);
-        var b = parseInt(num4).toString(2);
-  var result = parseInt(a,2)  >>> parseInt(b,2);
-       document.getElementById("targetDiv2").innerHTML =  a + "<br>" +
-        b + "<br>" + "result decimal :" + result  ;
-     }
-        function conjuncion(){
-      var num5= document.getElementById('textfield5');
-      var num6= document.getElementById('textfield6');
-  var rpta = num5^num6;
-       document.getElementById("targetDiv3").innerHTML =  num5 + "<br>" +
-        num6 + "<br>" + "result  :" + rpta  ;
-     }
-  </script>
  <body>
     <center>
     <div class="caja">
 
-<h1 class="titulo" >Laboratorio Programación web 2 </h1>
-<nav id="demo" style="display:none">
+<header>
+                
+                <h1>Calculadoras </h1>
+                
+            </header>
+<br>
+<div id="CalcAritmetica" style="display:none">
+
   <p>OPERACIONES ARITMETICAS</p>
     <nav class="cal">
       <form>
@@ -117,14 +34,14 @@ document.getElementById("targetDiv").innerHTML = parseInt(num1)+ parseInt(num2);
       <b>resultado: </b><div id="targetDiv"> </div>
   </nav>
      
-</nav>
+</div>
 
-<button type="button" onclick="document.getElementById('demo').style.display='block'">ARITMETICAS</button>
+<button type="button" onclick="Aritmetica()">ARITMETICAS</button>
    
       <br>
 
 
-   <nav id="binario" style="display:none">      
+   <div id="CalcBinario" style="display:none">      
       <p>OPERACIONES BINARIAS</p>
    <br>
    <nav class ="calculadora2">
@@ -134,24 +51,23 @@ document.getElementById("targetDiv").innerHTML = parseInt(num1)+ parseInt(num2);
       <br>
    <input type="text" style="background:#fff ; border-color: white;color:#ff7b4a" id="textfield4"> 
    <br>
-           <input type="button" style="background:#000080;font-size:20px ;width: 50px ;height: 50px; border-color: white ; color:white"  onclick="and()" value="&">
-      <input type="button" style="background:#000080;font-size:20px ;width: 50px ;height: 50px; border-color: white ; color:white"  onclick="or()" value="|">
-      <input type="button" style="background:#000080;font-size:20px ;width: 50px ;height: 50px; border-color: white ; color:white"   onclick="left()" value="<<"><br>
-      <input type="button" style="background:#000080;font-size:20px ;width: 50px ;height: 50px; border-color: white ; color:white"   onclick="right()" value=">>">
-      <input type="button" style="background:#000080;font-size:20px ;width: 50px ;height: 50px; border-color: white ; color:white"   onclick="right2()" value=">>>">
+           <input type="button" style="background:#000080;font-size:20px ;width: 50px ;height: 50px; border-color: white ; color:white"  onclick="and();" value="&">
+      <input type="button" style="background:#000080;font-size:20px ;width: 50px ;height: 50px; border-color: white ; color:white"  onclick="or();" value="|">
+      <input type="button" style="background:#000080;font-size:20px ;width: 50px ;height: 50px; border-color: white ; color:white"   onclick="left();" value="<<"><br>
+      <input type="button" style="background:#000080;font-size:20px ;width: 50px ;height: 50px; border-color: white ; color:white"   onclick="right();" value=">>">
+      <input type="button" style="background:#000080;font-size:20px ;width: 50px ;height: 50px; border-color: white ; color:white"   onclick="right2();" value=">>>">
        <input type="button" style="background:#000080;font-size:20px ;width: 50px ;height: 50px; border-color: white ; color:white"   onclick="xor()" value="^">
      <br>
       </form>
       <b>Resultado: </b><div id="targetDiv2"> </div>
      
    </nav>
-   </nav>
+  </div>
    <br>
-
-<button type="button" onclick="document.getElementById('binario').style.display='block'">BINARIAS</button>
+  <button type="button" onclick="Binarias()">BINARIO</button>
    <br>
   <br>
-   <nav id="logica" style="display:none">      
+   <div id="logica" style="display:none">      
       <p>OPERACIONES LOGICAS</p>
    <br>
    <nav class ="calculadora3">
@@ -171,8 +87,8 @@ document.getElementById("targetDiv").innerHTML = parseInt(num1)+ parseInt(num2);
       </form>
 <b>Resultado: </b><div id="targetDiv3"> </div>
  </nav>
-   </nav>
-    <button type="button" onclick="document.getElementById('logica').style.display='block'">LOGICA</button>
+   </div>
+    <button type="button" onclick="Logicas()">LOGICA</button>
      
   
 <br>
@@ -181,5 +97,5 @@ document.getElementById("targetDiv").innerHTML = parseInt(num1)+ parseInt(num2);
 
     </div>
     </center>
-</body>
+  </body>
 </html>
